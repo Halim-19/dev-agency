@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "title": "Shidda Agency",
+        "description": "Studio de développement créant des solutions numériques de précision",
+        "author": "@shidda_dev"
+    },
+    "hero": {
+        "title": "Shidda Agency",
+        "subtitle": "Studio de développement créant des solutions numériques de précision.",
+        "cta": "Voir Nos Projets"
+    },
+    "about": {
+        "title": "Artisanat Numérique",
+        "description": "Nous nous spécialisons dans la création de produits numériques sophistiqués avec un accent sur la performance, la sécurité et l'expérience utilisateur. Chaque projet reçoit toute notre attention. Basé sur des principes d'ingénierie méticuleux, nous livrons des solutions qui résistent à l'épreuve du temps tout en adoptant des pratiques de développement modernes.",
+        "values": [
+            {
+                "title": "Précision",
+                "description": "Attention à chaque détail"
+            },
+            {
+                "title": "Efficacité",
+                "description": "Livraison dans les délais"
+            },
+            {
+                "title": "Sécurité",
+                "description": "Protection de niveau entreprise"
+            },
+            {
+                "title": "Passion",
+                "description": "Dévouement à l'excellence"
+            }
+        ]
+    },
+    "services": {
+        "title": "Services",
+        "items": [
+            {
+                "title": "Développement Sur Mesure",
+                "description": "Applications web personnalisées"
+            },
+            {
+                "title": "Design UI/UX",
+                "description": "Interfaces minimalistes et fonctionnelles"
+            },
+            {
+                "title": "Architecture Système",
+                "description": "Solutions évolutives"
+            },
+            {
+                "title": "Systèmes Backend",
+                "description": "Gestion robuste des données"
+            },
+            {
+                "title": "Solutions Cloud",
+                "description": "Déploiement optimisé"
+            },
+            {
+                "title": "Analytique",
+                "description": "Informations basées sur les données"
+            }
+        ]
+    }
+}
