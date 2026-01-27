@@ -6,8 +6,8 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "Shidda Agency",
-  description: "Created by @shidda_dev – Development & Design Studio",
+  title: "frameless Agency",
+  description: "Created by @frameless_dev – Development & Design Studio",
   icons: {
     icon: "/logo/logo.png",
   },
@@ -24,7 +24,7 @@ export default function RootLayout({
         <Link href="/" className="fixed top-4 left-4 z-50">
           <Image
             src="/logo/logo.png"
-            alt="Shidda Agency Logo"
+            alt="frameless Agency Logo"
             width={0}
             height={0}
             sizes="100vw"

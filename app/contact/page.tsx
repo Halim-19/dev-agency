@@ -63,8 +63,8 @@ export default function Contact() {
         {
             icon: <Mail size={20} />,
             title: "Email",
-            value: "hello@shidda.agency",
-            action: "mailto:hello@shidda.agency"
+            value: "hello@frameless.agency",
+            action: "mailto:hello@frameless.agency"
         },
         {
             icon: <Phone size={20} />,
@@ -90,17 +90,17 @@ export default function Contact() {
         {
             icon: <Linkedin size={18} />,
             label: "LinkedIn",
-            href: "https://linkedin.com/company/shidda-agency"
+            href: "https://linkedin.com/company/frameless-agency"
         },
         {
             icon: <Github size={18} />,
             label: "GitHub",
-            href: "https://github.com/shidda-dev"
+            href: "https://github.com/frameless-dev"
         },
         {
             icon: <Twitter size={18} />,
             label: "Twitter",
-            href: "https://twitter.com/shidda_dev"
+            href: "https://twitter.com/frameless_dev"
         }
     ]
 

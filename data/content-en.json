@@ -1,11 +1,11 @@
 {
     "meta": {
-        "title": "Shidda Agency",
+        "title": "frameless Agency",
         "description": "Development studio crafting precision digital solutions",
-        "author": "@shidda_dev"
+        "author": "@frameless_dev"
     },
     "hero": {
-        "title": "Shidda Agency",
+        "title": "frameless Agency",
         "subtitle": "Development studio crafting precision digital solutions.",
         "cta": "Explore Our Work"
     },
@@ -94,7 +94,7 @@
         "items": [
             {
                 "year": "2022",
-                "event": "Shidda Agency Founded"
+                "event": "frameless Agency Founded"
             },
             {
                 "year": "2023",
@@ -115,11 +115,11 @@
         "description": "Let's discuss your project and explore how we can bring your vision to life.",
         "cta1": "Start a Project",
         "cta2": "Schedule a Call",
-        "email": "hello@shidda.agency",
-        "social": "@shidda_dev"
+        "email": "hello@frameless.agency",
+        "social": "@frameless_dev"
     },
     "footer": {
-        "copyright": "© 2024 Shidda Agency. All rights reserved.",
+        "copyright": "© 2024 frameless Agency. All rights reserved.",
         "links": [
             {
                 "label": "Privacy",

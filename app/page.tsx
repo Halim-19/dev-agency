@@ -79,7 +79,7 @@ export default function Home() {
   ]
 
   const timeline = [
-    { year: "2022", event: "Shidda Agency Founded" },
+    { year: "2022", event: "frameless Agency Founded" },
     { year: "2023", event: "First Enterprise Client" },
     { year: "2023", event: "Team Expansion" },
     { year: "2024", event: "International Projects" },
@@ -116,7 +116,7 @@ export default function Home() {
 
             {/* Agency name with subtle effect */}
             <h1 className="text-6xl md:text-7xl font-light tracking-tight mb-6">
-              Shidda
+              frameless
               <span className="block mt-2 text-white/70">Agency</span>
             </h1>
 
@@ -129,7 +129,7 @@ export default function Home() {
             >
               Development studio crafting precision digital solutions.
               <br />
-              <span className="text-white/40 text-sm">— Created by @shidda_dev</span>
+              <span className="text-white/40 text-sm">— Created by @frameless_dev</span>
             </motion.p>
 
             {/* CTA Button */}
@@ -337,8 +337,8 @@ export default function Home() {
             </div>
 
             <div className="text-sm text-white/40 space-y-2">
-              <div>hello@shidda.agency</div>
-              <div>@shidda_dev</div>
+              <div>hello@frameless.agency</div>
+              <div>@frameless_dev</div>
             </div>
           </div>
         </section>
@@ -347,7 +347,7 @@ export default function Home() {
         <footer className="pt-12 border-t border-white/5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-white/40">
-              © {new Date().getFullYear()} Shidda Agency. All rights reserved.
+              © {new Date().getFullYear()} frameless Agency. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm text-white/40">
               <a href="#" className="hover:text-white/60 transition-colors">Privacy</a>
