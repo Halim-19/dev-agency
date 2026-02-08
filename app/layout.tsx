@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
+
 
 
 
@@ -21,16 +20,7 @@ export default function RootLayout({
       <body
         className={` font-sans antialiased bg-black text-white`}
       >
-        <Link href="/" className="fixed top-4 left-4 z-50">
-          <Image
-            src="/logo/logo.png"
-            alt="frameless Agency Logo"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-10 h-auto  pointer-events-none select-none opacity-90"
-          />
-        </Link>
+
         {children}
       </body>
     </html>
