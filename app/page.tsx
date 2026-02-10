@@ -85,7 +85,7 @@ export default function Home() {
           delay: 2,
           ease: "easeOut"
         }}
-        className="fixed top-0 left-0 h-10 w-full z-100 px-4 md:px-8 py-6 flex items-center justify-between  mix-blend-difference bg-black/5 backdrop-blur-sm md:bg-transparent">
+        className="fixed top-0 left-0  h-10 w-full z-100 px-4 md:px-8 py-6 flex items-center justify-between  mix-blend-difference bg-black/5 backdrop-blur-sm md:bg-transparent">
         <Link href="/" className="">
           <Image
             src="/logo/logo.png"

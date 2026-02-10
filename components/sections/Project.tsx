@@ -70,7 +70,7 @@ function Project() {
                             className="relative aspect-4/5 md:aspect-3/4 lg:aspect-4/5 bg-zinc-950 rounded-2xl overflow-hidden border border-white/[0.05] group-hover:border-white/[0.15] transition-colors duration-500"
                         >
                             {/* THE IMAGE: Integrated as the main background visual */}
-                            <div className="absolute inset-0 z-0 pt-20 flex items-start justify-center p-12 opacity-60 group-hover:opacity-100 transition-all duration-700">
+                            <div className="absolute inset-0 z-0 pt-20 flex items-start justify-center p-12 md:opacity-60 group-hover:opacity-100 transition-all duration-700">
                                 <Image
                                     src={project.image}
                                     alt={project.title}

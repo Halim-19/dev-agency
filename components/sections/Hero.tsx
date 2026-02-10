@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react"
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import heroImage from '@/public/hero/hero-image.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Hero() {
     // Reveal timing constants
@@ -83,9 +84,9 @@ function Hero() {
                 {/* Desktop Action */}
                 <motion.button
                     whileHover={{ scale: 1.05 }}
-                    className="hidden lg:inline-block px-10 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-500 text-[10px] uppercase tracking-[0.4em]"
+                    className="inline-block px-10 py-3 mb-5 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-500 text-[10px] uppercase tracking-[0.4em]"
                 >
-                    Explore Work
+                    <Link href="/contact">CONTACT US</Link>
                 </motion.button>
             </motion.div>
 
@@ -94,16 +95,16 @@ function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: REVEAL_DELAY + 0.8 }}
-                className="flex lg:hidden justify-center items-center gap-6 mt-8 z-10"
+                className="flex lg:hidden justify-center items-center gap-4 mt-1 z-10"
             >
                 <a target="_blank" rel="noreferrer" href="https://www.instagram.com/frameless_agency/">
-                    <FaInstagram className="w-8 h-8 p-2 rounded-full border border-white/20 bg-white/5" />
+                    <FaInstagram className="w-12 h-12 p-2 rounded-full border border-white/20 bg-white/5" />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=61561030740617">
-                    <FaFacebook className="w-8 h-8 p-2 rounded-full border border-white/20 bg-white/5" />
+                    <FaFacebook className="w-12 h-12 p-2 rounded-full border border-white/20 bg-white/5" />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=61561030740617">
-                    <FaWhatsapp className="w-8 h-8 p-2 rounded-full border border-white/20 bg-white/5" />
+                <a target="_blank" rel="noreferrer" href="https://wa.me/+213551085452">
+                    <FaWhatsapp className="w-12 h-12 p-2 rounded-full border border-white/20 bg-white/5" />
                 </a>
             </motion.div>
 

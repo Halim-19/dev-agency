@@ -22,14 +22,14 @@ function Contact() {
                         whileTap={{ scale: 0.98 }}
                         className="px-8 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-white/90 transition-colors"
                     >
-                        <Link href='/contact'>Start a Project</Link>
+                        <Link className="w-full h-full" href='/contact'>Start a Project</Link>
                     </motion.button>
                     <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className="px-8 py-3 border border-white/20 rounded-full text-sm font-medium hover:border-white/40 transition-colors"
                     >
-                        <Link href='/contact'>Schedule a Call</Link>
+                        <Link className="w-full h-full" href='/contact'>Schedule a Call</Link>
                     </motion.button>
                 </div>
 
