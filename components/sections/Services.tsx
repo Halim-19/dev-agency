@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion"
 import { Cloud, Cpu, Database, LineChart, Palette, Terminal } from "lucide-react"
 
@@ -11,7 +12,7 @@ function Services() {
         { icon: <LineChart size={20} />, title: "Analytics", desc: "Data-driven insights" },
     ]
     return (
-        <section className="mb-32" id="services" >
+        <section className="mb-32 md:px-12" id="services" >
             <div className="flex items-center gap-4 mb-12">
                 <div className="h-px bg-white/20 flex-1"></div>
                 <h2 className="text-sm uppercase tracking-widest text-white/40">Services</h2>

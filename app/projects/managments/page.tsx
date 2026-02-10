@@ -23,7 +23,7 @@ import Image from 'next/image'
 import cashierImg from "@/public/supermarket/cashier.png"
 import medicalImg from "@/public/doctors/appointment.png"
 import restaurantImg from "@/public/supermarket/cashier.png"
-import schoolImg from "@/public/supermarket/cashier.png"
+import schoolImg from "@/public/school/image.png"
 import gymImg from "@/public/supermarket/cashier.png"
 
 export default function ManagementsPage() {
@@ -55,6 +55,19 @@ export default function ManagementsPage() {
             device: "desktop"
         },
         {
+            id: "school",
+            title: "School Management",
+            category: "Education",
+            description: "Student records, class scheduling, grade management, and attendance tracking.",
+            features: ["Student Records", "Class Scheduling", "Grade Management", "Parent Portal"],
+            icon: <GraduationCap size={20} />,
+            color: "from-purple-500/20 to-purple-600/10",
+            iconColor: "text-purple-400",
+            available: true,
+            mockupImage: schoolImg,
+            device: "desktop"
+        },
+        {
             id: "restaurant",
             title: "Restaurant Management",
             category: "Hospitality",
@@ -67,19 +80,7 @@ export default function ManagementsPage() {
             mockupImage: restaurantImg,
             device: "tablet"
         },
-        {
-            id: "school",
-            title: "School Management",
-            category: "Education",
-            description: "Student records, class scheduling, grade management, and attendance tracking.",
-            features: ["Student Records", "Class Scheduling", "Grade Management", "Parent Portal"],
-            icon: <GraduationCap size={20} />,
-            color: "from-purple-500/20 to-purple-600/10",
-            iconColor: "text-purple-400",
-            available: false,
-            mockupImage: schoolImg,
-            device: "desktop"
-        },
+
         {
             id: "gym",
             title: "Gym Management",

@@ -71,13 +71,21 @@ export default function Home() {
   }, [])
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-black text-white overflow-y-auto selection:bg-white selection:text-black">
+    <div ref={containerRef} className="min-h-screen bg-black text-white  overflow-y-auto  selection:bg-white selection:text-black">
       {/* Background Layers */}
       <div className="fixed inset-0 bg-linear-to-br from-black via-[#0a0a0a] to-black"></div>
       <div className="fixed inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-size-[50px_50px]"></div>
 
       {/*  NEW: TOP NAVIGATION BAR */}
-      <nav className="fixed top-0 left-0 w-full z-100 px-4 md:px-8 py-6 flex items-center justify-between  mix-blend-difference bg-black/5 backdrop-blur-sm md:bg-transparent">
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          delay: 2,
+          ease: "easeOut"
+        }}
+        className="fixed top-0 left-0 h-10 w-full z-100 px-4 md:px-8 py-6 flex items-center justify-between  mix-blend-difference bg-black/5 backdrop-blur-sm md:bg-transparent">
         <Link href="/" className="">
           <Image
             src="/logo/logo.png"
@@ -100,7 +108,7 @@ export default function Home() {
             </button>
           ))}
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Side Dot Navigation (Right)
       <nav className="fixed right-8 bottom-1/2 translate-y-1/2 z-50 hidden lg:flex flex-col gap-6 items-end">
@@ -122,7 +130,15 @@ export default function Home() {
        */}
 
       {/* Social Links (Left) */}
-      <div className="hidden md:flex fixed left-6 bottom-1/2 translate-y-1/2 flex-col gap-4 z-50">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          delay: 2,
+          ease: "easeOut"
+        }}
+        className="hidden md:flex fixed left-6 bottom-1/2 translate-y-1/2 flex-col gap-4 z-50">
         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/frameless_agency/">
           <FaInstagram className="w-10 h-10 p-2.5 cursor-pointer rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-black transition-all duration-300" />
         </a>
@@ -132,10 +148,10 @@ export default function Home() {
         <a href="https://wa.me/+213551085452">
           <FaWhatsapp className="w-10 h-10 p-2.5 cursor-pointer rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-black transition-all duration-300" />
         </a>
-      </div>
+      </motion.div>
 
       {/* Main Content */}
-      <motion.div style={{ opacity, scale }} className="relative z-10 max-w-4xl mx-auto px-6 py-12">
+      <motion.div style={{ opacity, scale }} className="relative z-10 px-6 py-12 md:px-16 ">
         <section id="hero"><Hero /></section>
         <section id="projects" className="pt-20"><Project /></section>
         <section id="services" className="pt-20"><Services /></section>

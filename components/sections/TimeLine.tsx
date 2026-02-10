@@ -9,7 +9,7 @@ function TimeLine() {
         { year: "2024", event: "International Projects" },
     ]
     return (
-        <section className="mb-32" id="timeline">
+        <section className="mb-32 md:px-12" id="timeline">
             <div className="flex items-center gap-4 mb-12">
                 <div className="h-px bg-white/20 flex-1"></div>
                 <h2 className="text-sm uppercase tracking-widest text-white/40">Timeline</h2>

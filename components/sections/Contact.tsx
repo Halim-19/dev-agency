@@ -1,8 +1,9 @@
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 function Contact() {
     return (
-        <section className="mb-32" id="contact">
+        <section className="mb-32 md:px-12" id="contact">
             <div className="flex items-center gap-4 mb-12">
                 <div className="h-px bg-white/20 flex-1"></div>
                 <h2 className="text-sm uppercase tracking-widest text-white/40">Contact</h2>
@@ -21,19 +22,19 @@ function Contact() {
                         whileTap={{ scale: 0.98 }}
                         className="px-8 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-white/90 transition-colors"
                     >
-                        Start a Project
+                        <Link href='/contact'>Start a Project</Link>
                     </motion.button>
                     <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className="px-8 py-3 border border-white/20 rounded-full text-sm font-medium hover:border-white/40 transition-colors"
                     >
-                        Schedule a Call
+                        <Link href='/contact'>Schedule a Call</Link>
                     </motion.button>
                 </div>
 
                 <div className="text-sm text-white/40 space-y-2">
-                    <div>hello@frameless.agency</div>
+                    <div>bensalemhalim19@gmail.com</div>
                     <div>@frameless_dev</div>
                 </div>
             </div>

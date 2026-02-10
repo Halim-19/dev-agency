@@ -15,7 +15,7 @@ function About() {
         { icon: <Heart size={20} />, title: "Passion", desc: "Dedication to excellence" },
     ]
     return (
-        <section className="mb-32" id='about'>
+        <section className="mb-32 md:px-12" id='about'>
             <div className="flex items-center gap-4 mb-12">
                 <div className="h-px bg-white/20 flex-1"></div>
                 <h2 className="text-sm uppercase tracking-widest text-white/40">About</h2>
