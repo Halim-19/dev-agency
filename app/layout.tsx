@@ -17,12 +17,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+
+
   return (
     <html lang="en">
       <body
         className={` font-sans antialiased bg-black text-white`}
       >
-        <Link href="/" className="fixed top-0 left-0 h-10 p-2 z-100">
+        <Link href="/" className="fixed top-0 left-0 h-10 p-2 z-999">
           <Image
             src="/logo/logo.png"
             alt="frameless Agency Logo"
@@ -32,6 +34,7 @@ export default function RootLayout({
             className="w-10 h-auto pointer-events-none select-none opacity-90"
           />
         </Link>
+
 
         {children}
       </body>

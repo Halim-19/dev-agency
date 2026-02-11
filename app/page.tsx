@@ -85,17 +85,8 @@ export default function Home() {
           delay: 2,
           ease: "easeOut"
         }}
-        className="fixed top-0 left-0  h-10 w-full z-100 px-4 md:px-8 py-6 flex items-center justify-between  mix-blend-difference bg-black/5 backdrop-blur-sm md:bg-transparent">
-        <Link href="/" className="">
-          <Image
-            src="/logo/logo.png"
-            alt="frameless Agency Logo"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-10 h-auto pointer-events-none select-none opacity-90"
-          />
-        </Link>
+        className="fixed top-0 left-0  h-10 w-full z-100 px-4 md:px-8 py-6 flex items-center justify-end  mix-blend-difference bg-black/5 backdrop-blur-sm md:bg-transparent">
+
         <div className="flex items-center gap-3 sm:gap-6 md:gap-8 overflow-x-auto no-scrollbar max-w-full pb-2 md:pb-0">
           {navItems.map((item) => (
             <button
