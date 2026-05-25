@@ -1,65 +1,22 @@
 'use client'
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect, useRef } from "react"
-import {
-    Globe,
-    Palette,
-    Code,
-    Smartphone,
-    Zap,
-    Shield,
-    Check,
-    ArrowRight,
-    Play,
-    Pause,
-    Volume2,
-    VolumeX,
-    Maximize2,
-    Search,
-    ShoppingCart,
-    Users,
-    BarChart,
-    Mail,
-    Calendar,
-    Settings,
-    Database,
-    Cloud,
-    Lock,
-    Monitor
-} from "lucide-react"
+import Image from "next/image";
 import DesktopMockup from "@/components/mockup/DesktopMockup";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Globe, ShoppingCart, BarChart, Mail, Check, ArrowRight, Code } from "lucide-react";
 
 function WebsiteProject() {
-    const [isPlaying, setIsPlaying] = useState(true);
-    const [isMuted, setIsMuted] = useState(false);
-    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const videoRef = useRef<HTMLVideoElement>(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    // Video files - replace with your actual video paths
-    const videos = [
-        {
-            src: '/video/ecommerce1.webm',
-            poster: '/videos/website-poster-1.jpg',
-            title: "E-commerce Platform",
-            description: "Full online shopping experience with cart and checkout"
-        },
-        // {
-        //     src: '/videos/website-demo-2.mp4',
-        //     poster: '/videos/website-poster-2.jpg',
-        //     title: "Dashboard Interface",
-        //     description: "Modern admin dashboard with real-time analytics"
-        // },
-        // {
-        //     src: '/videos/website-demo-3.mp4',
-        //     poster: '/videos/website-poster-3.jpg',
-        //     title: "Mobile Web App",
-        //     description: "Responsive mobile-first web application"
-        // }
+    // Image files – update paths as needed
+    const images = [
+        { src: '/website/eCommerce/image.png', alt: 'E-commerce project screenshot' },
+        { src: '/website/eLearning/image.png', alt: 'eLearning project screenshot' }
     ];
 
-    const currentVideo = videos[currentVideoIndex];
+    const currentImage = images[currentImageIndex];
 
     const websiteTypes = [
         {
@@ -127,46 +84,6 @@ function WebsiteProject() {
         "Showcase products and services effectively",
         "Improve customer engagement"
     ];
-
-    useEffect(() => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        if (isPlaying) {
-            video.play().catch(console.error);
-        } else {
-            video.pause();
-        }
-    }, [isPlaying, currentVideoIndex]);
-
-    useEffect(() => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        video.muted = isMuted;
-    }, [isMuted]);
-
-    const togglePlay = () => {
-        setIsPlaying(!isPlaying);
-    };
-
-    const toggleMute = () => {
-        setIsMuted(!isMuted);
-    };
-
-    const nextVideo = () => {
-        setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
-        setIsPlaying(true);
-    };
-
-    const prevVideo = () => {
-        setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length);
-        setIsPlaying(true);
-    };
-
-    const handleVideoEnded = () => {
-        nextVideo();
-    };
 
     return (
         <div className="min-h-screen bg-black text-white p-4 sm:p-6 md:p-8 lg:p-12">
@@ -304,7 +221,7 @@ function WebsiteProject() {
                         </div>
                     </motion.div>
 
-                    {/* Right Column - Video Mockup & Tech */}
+                    {/* Right Column - Image Mockup & Tech */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -312,126 +229,35 @@ function WebsiteProject() {
                         className="lg:w-1/2"
                     >
                         <div className="sticky top-8">
-                            {/* Video Carousel */}
+                            {/* Image Carousel */}
                             <div className="mb-8">
                                 <div className="flex items-center justify-between mb-6">
-                                    <div className="flex items-center gap-4">
-                                        <div className="h-px bg-white/20 w-8"></div>
-                                        <h2 className="text-sm uppercase tracking-widest text-white/40">Live Demo</h2>
-                                    </div>
-
+                                    <h2 className="text-sm uppercase tracking-widest text-white/40">Project Gallery</h2>
                                     <div className="flex items-center gap-2">
-                                        <button
-                                            onClick={prevVideo}
-                                            className="p-2 rounded-lg border border-white/10 hover:border-white/20 transition-colors"
-                                        >
+                                        <button onClick={() => setCurrentImageIndex((i) => (i - 1 + images.length) % images.length)} className="p-2 rounded-lg border border-white/10 hover:border-white/20 transition-colors">
                                             <ArrowRight className="w-4 h-4 rotate-180" />
                                         </button>
-                                        <button
-                                            onClick={nextVideo}
-                                            className="p-2 rounded-lg border border-white/10 hover:border-white/20 transition-colors"
-                                        >
+                                        <button onClick={() => setCurrentImageIndex((i) => (i + 1) % images.length)} className="p-2 rounded-lg border border-white/10 hover:border-white/20 transition-colors">
                                             <ArrowRight className="w-4 h-4" />
                                         </button>
                                     </div>
                                 </div>
-
-                                {/* Video Indicator Dots */}
+                                {/* Image Indicator Dots */}
                                 <div className="flex justify-center gap-2 mb-4">
-                                    {videos.map((_, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => {
-                                                setCurrentVideoIndex(index);
-                                                setIsPlaying(true);
-                                            }}
-                                            className={`w-2 h-2 rounded-full transition-all ${index === currentVideoIndex ? 'bg-white' : 'bg-white/30'}`}
-                                        />
+                                    {images.map((_, idx) => (
+                                        <button key={idx} onClick={() => setCurrentImageIndex(idx)} className={`w-2 h-2 rounded-full ${idx === currentImageIndex ? 'bg-white' : 'bg-white/30'}`} />
                                     ))}
                                 </div>
-
-                                {/* Video Title */}
+                                {/* Image Title */}
                                 <div className="text-center mb-4">
-                                    <h3 className="font-medium text-white/90">{currentVideo.title}</h3>
-                                    <p className="text-sm text-white/60">{currentVideo.description}</p>
+                                    <h3 className="font-medium text-white/90">{currentImage.alt}</h3>
                                 </div>
-
-                                {/* Video Mockup Container */}
+                                {/* Image Mockup Container */}
                                 <DesktopMockup>
                                     <div className="relative w-full h-full bg-black overflow-hidden group">
-                                        <AnimatePresence mode="wait">
-                                            <motion.video
-                                                key={currentVideoIndex}
-                                                ref={videoRef}
-                                                src={currentVideo.src}
-                                                poster={currentVideo.poster}
-                                                className="w-full h-full object-contain"
-                                                muted={isMuted}
-                                                loop={true}
-                                                onEnded={handleVideoEnded}
-                                                playsInline
-                                                preload="metadata"
-
-                                            />
-                                        </AnimatePresence>
-
-                                        {/* Video Controls Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                                                <div className="flex items-center justify-between">
-                                                    <div className="flex items-center gap-3">
-                                                        <button
-                                                            onClick={togglePlay}
-                                                            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-                                                        >
-                                                            {isPlaying ? (
-                                                                <Pause className="w-4 h-4" />
-                                                            ) : (
-                                                                <Play className="w-4 h-4" />
-                                                            )}
-                                                        </button>
-                                                        <button
-                                                            onClick={toggleMute}
-                                                            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-                                                        >
-                                                            {isMuted ? (
-                                                                <VolumeX className="w-4 h-4" />
-                                                            ) : (
-                                                                <Volume2 className="w-4 h-4" />
-                                                            )}
-                                                        </button>
-                                                        <div className="text-xs text-white/60">
-                                                            {currentVideoIndex + 1} / {videos.length}
-                                                        </div>
-                                                    </div>
-                                                    <div className="text-xs text-white/60">
-                                                        Click to interact
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Play/Pause Overlay */}
-                                        {!isPlaying && (
-                                            <div className="absolute inset-0 flex items-center justify-center">
-                                                <button
-                                                    onClick={togglePlay}
-                                                    className="p-4 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-                                                >
-                                                    <Play className="w-8 h-8" />
-                                                </button>
-                                            </div>
-                                        )}
+                                        <Image src={currentImage.src} alt={currentImage.alt} fill className="object-contain" />
                                     </div>
                                 </DesktopMockup>
-
-                                {/* Video Navigation Info */}
-                                <div className="text-center mt-4">
-                                    <div className="inline-flex items-center gap-2 text-xs text-white/40">
-                                        <Play className="w-3 h-3" />
-                                        <span>Click play to watch demo • Auto-advances to next video</span>
-                                    </div>
-                                </div>
                             </div>
 
                             {/* Development Process */}
